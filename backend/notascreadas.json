@@ -1,0 +1,18 @@
+[
+{"type":"header","version":"5.1.0","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"notas"},
+{"type":"table","name":"notascreadas","database":"notas","data":
+[
+{"id":"22","titulo":"Terminar proyecto de angular","estado":"2","descripcion":"Aun faltan cosas que agregar :("},
+{"id":"23","titulo":"Terminar proyecto de angular II","estado":"2","descripcion":"Falta arreglar página principal, solo dejar el botón actualizar e implementar la función de borrar y seleccionar en el componente visualizar notas"},
+{"id":"24","titulo":"Terminar proyecto de angular III","estado":"2","descripcion":"Funciona perfectamente la función de eliminar y modificar ahora solo hay que implementarla en el otro componente y listoooooo"},
+{"id":"25","titulo":"Terminar proyecto de angular IV","estado":"2","descripcion":"No tengo ni idea como hacer funcionar esto más allá de lo creado, no se me ocurre como darle un buen formato a las notas, y esto está fallandoooo"},
+{"id":"28","titulo":"Terminar proyecto de angular V","estado":"2","descripcion":"Pude ver la validación de datos y es todo responsivooo hay progresooo"},
+{"id":"29","titulo":"Faltó lo siguiente I","estado":"1","descripcion":"- Crear y ordenar de forma correcta las notas, separadas por color\/estado de la nota"},
+{"id":"30","titulo":"Faltó lo siguiente II","estado":"1","descripcion":"- Traspasar de manera correcta lo implementado en el componente formulariocrearnotas al complemento visualizar-notas"},
+{"id":"31","titulo":"Faltó lo siguiente III","estado":"1","descripcion":"- Traspasar las funciones eliminar y modificar en las notas de visualizar notas, estas se pudieron implementar pero no se aplicaron a lo esperado"},
+{"id":"32","titulo":"Faltó lo siguiente IV","estado":"1","descripcion":"- Corroborar que solo se puede editar en notas abiertas o en proceso"},
+{"id":"34","titulo":"Conclusión","estado":"1","descripcion":"Aprendí harto del manejo de front end con back end, el trabajo individual es duro, los tiempos fueron adecuados"}
+]
+}
+]

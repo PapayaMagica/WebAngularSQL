@@ -1,0 +1,44 @@
+footer {  
+    position: fixed;  
+    bottom: 0;  
+    margin-left: 40%;
+}
+
+button {
+    
+    text-align: center;
+    width: 250%;
+    font-size: 200%;
+    padding: 10px;
+    opacity: 0.5;
+}
+
+mat-card{
+    width: 25%;
+    margin-left: 5%;
+    float: left;
+}
+
+#abierto{
+    background-color: rgb(199, 90, 90);
+}
+
+#en_proceso{
+    background-color: rgb(95, 180, 92);
+}
+
+#cerrado{
+    background-color: rgb(82, 143, 199);
+}
+
+h1
+{
+    font-weight: bold;
+    font-size: 200%;
+}
+
+h2
+{
+    font-weight:lighter;
+    font-size: 150%;
+}

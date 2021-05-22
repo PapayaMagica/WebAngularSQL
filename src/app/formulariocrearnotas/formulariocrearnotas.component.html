@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="starter-template">
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <h1>Mis notas:</h1>
+                <form [formGroup]="formulario">
+
+                    <div class="form-group">
+                    <label for="titulo">Título:</label>
+                    <input type="text" [(ngModel)]="formularioAUXMOD.titulo" formControlName="titulo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.titulo.errors }" placeholder="Ingrese título de la nota" />
+                     <div *ngIf="submitted && f.titulo.errors" class="invalid-feedback">
+                         <div *ngIf="f.titulo.errors.required">Debe ingresar título de la nota.</div> 
+                     </div>
+                 </div> 
+
+                    <div class="form-group">
+                        <label for="estado">Estado:</label>
+                        <select formControlName="estado" [(ngModel)]="formularioAUXMOD.estado" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.estado.errors }">
+                            <option value="0">Abierto</option>
+                            <option value="1">Cerrado</option>
+                            <option value="2">En Proceso</option>    
+                        </select>
+                        <div *ngIf="submitted && f.estado.errors" class="invalid-feedback">
+                            <div *ngIf="f.estado.errors.required">Debe ingresar estado de la nota.</div>
+                        </div>
+                   </div>
+
+                   <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea class="form-control" [(ngModel)]="formularioAUXMOD.descripcion" formControlName="descripcion" rows="3" [ngClass]="{ 'is-invalid': submitted && f.descripcion.errors }" maxlength="150" placeholder="Ingrese una breve descripción..."></textarea>
+                    <div *ngIf="submitted && f.descripcion.errors" class="invalid-feedback">
+                        <div *ngIf="f.descripcion.errors.required">Debe ingresar descripcion de la nota.</div>
+                    </div>
+                   </div>
+                   
+                  <div class="form-group">
+                        <button style="margin: 10px" class="btn btn-primary" (click)="actualizar()"> Crear </button>
+                        <button  class="btn btn-primary" (click)="modificar()"> Modificar </button>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <hr>
+
+
+Esta es una parte usada para debuggeo, si permanece en la entrega final es por que no 
+se pudo implementar todo lo que sale aquí :( 
+    
+    <br><br>
+
+
+    <div align="center">
+        <table class="table table-responsive">
+          <thead class="thead-dark  letrapequena" >
+             <tr *ngIf="hayRegistros(); else no_notas_registradas">
+              <th>ID</th>
+              <th>TITULO</th>
+              <th>ESTADO</th>
+              <th>DESCRIPCION</th>
+              <th>BORRAR</th>
+              <th>SELECCIONAR</th>
+            </tr>
+           </thead>
+            <tr *ngFor="let formulario of formularioAUX">
+            <td> {{ formulario.id          }} </td>
+            <td> {{ formulario.titulo      }} </td>
+            <td> {{ formulario.estado      }} </td>
+            <td> {{ formulario.descripcion }} </td>
+            <td> <button class="btn btn-danger" (click)="eliminarNotas(formulario.id)"> X </button> </td>
+            <td> <button class="btn btn-warning" (click)="seleccionarNotas(formulario.id)"> Seleccionar </button> </td>
+          </tr>
+       
+        </table>
+      
+        <ng-template #no_notas_registradas>
+         <p class="noNotas">No hay notas registradas.</p>
+        </ng-template>
+      
+      </div>
+</div>
